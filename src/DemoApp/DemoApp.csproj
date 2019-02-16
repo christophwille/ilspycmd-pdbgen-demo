@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Sample3rdPartyDemoLibrary">
+      <HintPath>..\Sample3rdPartyDemoLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="ilspycmd" Version="5.0.0.tbd-alpha1" />
+  </ItemGroup>
+
+  <Target Name="GenerateDebugInfo" AfterTargets="AfterBuild">
+    <Exec Command="dotnet ilspycmd $(OutputPath)/Sample3rdPartyDemoLibrary.dll -d" />
+  </Target>
+
+</Project>

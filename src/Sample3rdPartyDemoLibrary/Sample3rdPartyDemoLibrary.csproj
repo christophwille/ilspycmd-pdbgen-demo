@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+    <ItemGroup>
+        <MySourceFiles Include="$(OutputPath)/$(AssemblyName).dll"/>
+    </ItemGroup>
+
+    <Target Name="CopyFiles" AfterTargets="AfterBuild">
+        <Copy
+            SourceFiles="@(MySourceFiles)"
+            DestinationFolder="$(OutputPath)/../../../../"
+        />
+    </Target>
+
+</Project>
