@@ -14,3 +14,7 @@ NOTE: You must install https://www.nuget.org/packages/ilspycmd/5.0.0-preview1 as
 `dotnet tool install --global ilspycmd --version 5.0.0-preview1`
 
 Program.cs in DemoApp has a Debugger.Break statement, so simply F5-ing is fine after build. You should be able to [step into Add](/src/DemoApp/Program.cs#L14).
+
+## The Real World
+
+You would use ilspycmd to pre-generate the PDB, and not do it on every build.
