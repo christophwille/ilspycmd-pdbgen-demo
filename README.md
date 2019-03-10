@@ -9,4 +9,8 @@ the root of the solution  (see [copy code](/src/Sample3rdPartyDemoLibrary/Sample
 The DemoApp project references the assembly from this location, and it has an [AfterBuild](/src/DemoApp/DemoApp.csproj#L18)
 task that uses [ilspycmd](https://www.nuget.org/packages/ilspycmd/) to generate the PDB.
 
+NOTE: You must install https://www.nuget.org/packages/ilspycmd/5.0.0-preview1 as a global tool at the moment!
+
+`dotnet tool install --global ilspycmd --version 5.0.0-preview1`
+
 Program.cs in DemoApp has a Debugger.Break statement, so simply F5-ing is fine after build. You should be able to [step into Add](/src/DemoApp/Program.cs#L14).

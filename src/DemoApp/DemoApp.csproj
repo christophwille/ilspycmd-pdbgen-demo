@@ -11,12 +11,12 @@
     </Reference>
   </ItemGroup>
 
-  <ItemGroup>
+  <!--<ItemGroup>
     <DotNetCliToolReference Include="ilspycmd" Version="5.0.0-preview1" />
-  </ItemGroup>
+  </ItemGroup>-->
 
   <Target Name="GenerateDebugInfo" AfterTargets="AfterBuild">
-    <Exec Command="ilspycmd $(OutputPath)Sample3rdPartyDemoLibrary.dll -d" />
+    <Exec Command="ilspycmd $(OutputPath)Sample3rdPartyDemoLibrary.dll --debuginfo" />
   </Target>
 
 </Project>
