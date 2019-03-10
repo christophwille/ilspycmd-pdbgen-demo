@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <DotNetCliToolReference Include="ilspycmd" Version="5.0.0.tbd-alpha1" />
+    <DotNetCliToolReference Include="ilspycmd" Version="5.0.0-preview1" />
   </ItemGroup>
 
   <Target Name="GenerateDebugInfo" AfterTargets="AfterBuild">
