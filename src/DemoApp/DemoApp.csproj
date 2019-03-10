@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <Reference Include="Sample3rdPartyDemoLibrary">
-      <HintPath>..\Sample3rdPartyDemoLibrary.dll</HintPath>
+      <HintPath>$(SolutionDir)Sample3rdPartyDemoLibrary.dll</HintPath>
     </Reference>
   </ItemGroup>
 
